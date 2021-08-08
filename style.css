@@ -1,0 +1,57 @@
+@font-face {
+    src: url(fonts/neon.ttf);
+    font-family: neon;
+}
+
+canvas {
+    object-fit: contain;
+    width: 80vw;
+    height: 70vh;
+}
+
+body {
+    background-color: #333333;
+    text-align: center;
+}
+
+body h1 {
+    font-family: neon;
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: white;
+    text-shadow: 2px 0px 21px rgba(193, 0, 255, 1);
+}
+
+.toolbarButton {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin-left: 0;
+    margin-bottom: -5px;
+    display: inline-block;
+}
+
+
+.colorPickerUnopened {
+    position: absolute;
+    left: -9999px;
+}
+
+.colorPickerOpened {
+    position: absolute;
+    left: 50vh;
+}
+
+.colorPicker {
+    width: 200px;
+    height: 3000px;
+}
+
+.noAdditionalMargin {
+    margin: 0 !important;
+}
+
+canvas {
+    cursor: crosshair;
+}
