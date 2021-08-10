@@ -2,16 +2,56 @@
 <html>
     <head>
         <title>SnipEdit</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="javascript/colorPicker.js"></script>
         <script src="javascript/canvasSetup.js"></script>
         <script src="javascript/p5.js"></script>
         <script src="javascript/drawing.js"></script>
+        
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>SnipEdit</h1>
-        <a class="toolbarButton" onclick="console.log('s')"></a>
+        <input type="image" src="images/paintIcon.png" class="toolbarButton" onclick="toggleColorPicker()" id="pickColorButton"></a>
         <a class="toolbarButton" onclick="using = 'arrow'"></a>
         
-        <div id="colorPicker" class="colorPickerUnopened">asd</div>
+        <div id="colorPicker" class="colorPickerUnopened">
+            <h2>Pick a color</h2>
+            <button class="colorButton" style="background-color: #ff66cc;"></button>
+            <button class="colorButton" style="background-color: #ff00aa;"></button>
+            <button class="colorButton" style="background-color: #d90062;"></button>
+            <button class="colorButton" style="background-color: #de0034;"></button>
+            <button class="colorButton" style="background-color: #ff003c;"></button>
+            
+            <button class="colorButton" style="background-color: #e60000;"></button>
+            <button class="colorButton" style="background-color: #c74900;"></button>
+            <button class="colorButton" style="background-color: #ff5e00;"></button>
+            <button class="colorButton" style="background-color: #ff8842;"></button>
+            <button class="colorButton" style="background-color: #ffce2b;"></button>
+
+            <button class="colorButton" style="background-color: #e0ad00;"></button>
+            <button class="colorButton" style="background-color: #f6ff00;"></button>
+            <button class="colorButton" style="background-color: #c8ff8a;"></button>
+            <button class="colorButton" style="background-color: #9fff33;"></button>
+            <button class="colorButton" style="background-color: #5afac2;"></button>
+
+            <button class="colorButton" style="background-color: #00e3a3;"></button>
+            <button class="colorButton" style="background-color: #00d9ca;"></button>
+            <button class="colorButton" style="background-color: #00b4d4;"></button>
+            <button class="colorButton" style="background-color: #0093ad;"></button>
+            <button class="colorButton" style="background-color: #004c8f;"></button>
+
+            <button class="colorButton" style="background-color: #06088c;"></button>
+            <button class="colorButton" style="background-color: #530080;"></button>
+            <button class="colorButton" style="background-color: #8100c7;"></button>
+            <button class="colorButton" style="background-color: #b42dfc;"></button>
+            <button class="colorButton" style="background-color: #f021ff;"></button>
+
+            <button class="colorButton selected" style="background-color: black;"></button>
+            <button class="colorButton" style="background-color: darkslategray; "></button>
+            <button class="colorButton" style="background-color: gray;"></button>
+            <button class="colorButton" style="background-color: lightgray;"></button>
+            <button class="colorButton" style="background-color: white;"></button>
+        </div>
     </body>
 </html>

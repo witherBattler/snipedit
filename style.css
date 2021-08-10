@@ -3,6 +3,7 @@
     font-family: neon;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 canvas {
     object-fit: contain;
     width: 80vw;
@@ -32,6 +33,11 @@ body h1 {
     display: inline-block;
 }
 
+#pickColorButton {
+    background-image: url(images/paintIcon.png);
+    background-repeat: none;
+    background
+}
 
 .colorPickerUnopened {
     position: absolute;
@@ -39,18 +45,72 @@ body h1 {
 }
 
 .colorPickerOpened {
+    box-shadow:0 0 0 1600px rgba(0,0,0,0.65);/* dark around it */
     position: absolute;
-    left: 50vh;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-.colorPicker {
-    width: 200px;
-    height: 3000px;
+.colorButton {
+    width: 40px;
+    height: 40px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    border-style: solid;
+    border: none;
+    box-sizing:border-box;
 }
 
-.noAdditionalMargin {
-    margin: 0 !important;
+.selected {
+    border: black solid 2px !important;
+    border-style: solid;
+    margin-top: -2px;
+    margin-bottom: 2px;
 }
+
+h2 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+
+}
+
+.colorButton:hover {
+    outline:none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin: -5px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+}
+
+.colorButton:active {
+    border: none;
+    outline:none;
+}
+.colorButton:focus {
+    border: none;
+    outline:none;
+}
+#colorPicker {
+    height: 360px;
+    width: 320px;
+    background-color: #eeeeee;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+
+
 
 canvas {
     cursor: crosshair;
