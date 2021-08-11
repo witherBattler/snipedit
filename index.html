@@ -3,18 +3,20 @@
     <head>
         <title>SnipEdit</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="javascript/drawing.js"></script>
         <script src="javascript/colorPicker.js"></script>
         <script src="javascript/canvasSetup.js"></script>
         <script src="javascript/p5.js"></script>
-        <script src="javascript/drawing.js"></script>
-        
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>SnipEdit</h1>
-        <input type="image" src="images/paintIcon.png" class="toolbarButton" onclick="toggleColorPicker()" id="pickColorButton"></a>
-        <a class="toolbarButton" onclick="using = 'arrow'"></a>
-        
+        <center>
+            <div id="toolbar">
+                <a class="toolbarButton" onclick="toggleColorPicker()" id="pickColorButton"></a>
+                <a class="toolbarButton" onclick="using = 'arrow'"></a>
+            </div>
+        </center>
         <div id="colorPicker" class="colorPickerUnopened">
             <h2>Pick a color</h2>
             <button class="colorButton" style="background-color: #ff66cc;"></button>
@@ -47,11 +49,12 @@
             <button class="colorButton" style="background-color: #b42dfc;"></button>
             <button class="colorButton" style="background-color: #f021ff;"></button>
 
-            <button class="colorButton selected" style="background-color: black;"></button>
+            <button class="colorButton" style="background-color: black;"></button>
             <button class="colorButton" style="background-color: darkslategray; "></button>
             <button class="colorButton" style="background-color: gray;"></button>
             <button class="colorButton" style="background-color: lightgray;"></button>
-            <button class="colorButton" style="background-color: white;"></button>
+            <button class="colorButton selected" style="background-color: white;"></button>
+            <button id="colorPickerDone" onclick="submitColor()">Done</button>
         </div>
     </body>
 </html>

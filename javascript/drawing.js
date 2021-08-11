@@ -1,3 +1,6 @@
+let color = "white"
+
+
 function setup() {
     var canvas = createCanvas(900, 500)
     canvas.style("border", "black 1px solid")

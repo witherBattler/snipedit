@@ -28,21 +28,40 @@ body h1 {
     width: 50px;
     height: 50px;
     background-color: white;
-    margin-left: 0;
-    margin-bottom: -5px;
     display: inline-block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: solid black 2px;
 }
 
-#pickColorButton {
-    background-image: url(images/paintIcon.png);
-    background-repeat: none;
-    background
+.toolbarButton:hover {
+    cursor: pointer;
+} 
+
+#toolbar {
+    background-color: #666666;
+    width: 900px;
+    height: 60px;
 }
 
 .colorPickerUnopened {
     position: absolute;
     left: -9999px;
 }
+
+#colorPickerDone {
+    width: 100px;
+    height: 40px;
+    border: black solid 2px;
+    border-radius: 5px;
+}
+
+#colorPickerDone:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+    cursor: pointer;
+} 
+
+
 
 .colorPickerOpened {
     box-shadow:0 0 0 1600px rgba(0,0,0,0.65);/* dark around it */
@@ -76,7 +95,8 @@ h2 {
     color: black;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .colorButton:hover {
@@ -100,13 +120,15 @@ h2 {
     border: none;
     outline:none;
 }
+
 #colorPicker {
-    height: 360px;
+    height: 450px;
     width: 320px;
     background-color: #eeeeee;
     float: left;
     display: block;
     text-align: center;
+
 }
 
 
