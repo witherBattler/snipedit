@@ -4,7 +4,9 @@
         <title>SnipEdit</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="javascript/drawing.js"></script>
+        <script src="javascript/switchingTool.js"></script>
         <script src="javascript/colorPicker.js"></script>
+        <script src="javascript/sizePicker.js"></script>
         <script src="javascript/canvasSetup.js"></script>
         <script src="javascript/p5.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -13,8 +15,9 @@
         <h1>SnipEdit</h1>
         <center>
             <div id="toolbar">
-                <a class="toolbarButton" onclick="toggleColorPicker()" id="pickColorButton"></a>
-                <a class="toolbarButton" onclick="using = 'arrow'"></a>
+                <button class="toolbarButton" onclick="toggleColorPicker()" id="pickColorButton"></button>
+                <button class="toolbarButton toolbarButtonWithHtml" onclick="toggleSizePicker()" id="pickSizeButton">5</button>
+                <button class="toolbarButton" id="brushButton"></button>
             </div>
         </center>
         <div id="colorPicker" class="colorPickerUnopened">
@@ -55,6 +58,13 @@
             <button class="colorButton" style="background-color: lightgray;"></button>
             <button class="colorButton selected" style="background-color: white;"></button>
             <button id="colorPickerDone" onclick="submitColor()">Done</button>
+        </div>
+        <div id="sizePicker" class="sizePickerUnopened">
+            <h2>Pick the size you want</h2>
+            <input type="range" value="5" max="9" min="1" value="0" id="sizeInput">
+            <h3 id="sizeIndicator">5</h3>
+            <p id="firstSizeIndicator">1</p><p id="secondSizeIndicator">9</p>
+            <button id="sizePickerDone" onclick="submitSize()">Done</button>
         </div>
     </body>
 </html>

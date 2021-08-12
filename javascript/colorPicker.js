@@ -1,6 +1,6 @@
 let chosenColor = "white"
 function toggleColorPicker() {
-    if($("#colorPicker").attr("class") == "colorPickerUnopened"){
+    if($("#colorPicker").attr("class") == "colorPickerUnopened" && $("#sizePicker").attr("class") == "sizePickerUnopened"){
         $("#colorPicker").removeClass("colorPickerUnopened")
         $("#colorPicker").addClass("colorPickerOpened")
     }else{

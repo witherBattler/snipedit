@@ -3,7 +3,7 @@ var initialImageScaleModifier
 var coefficientRatio
 var pasted = false
 var initialImage
-var using = "none";
+var tool = "none";
 
 function retrieveImageFromClipboardAsBlob(pasteEvent, callback){
 	if(pasteEvent.clipboardData == false){

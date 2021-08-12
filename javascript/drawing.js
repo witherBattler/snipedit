@@ -1,5 +1,5 @@
 let color = "white"
-
+let size = 5
 
 function setup() {
     var canvas = createCanvas(900, 500)
