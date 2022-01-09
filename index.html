@@ -3,12 +3,14 @@
     <head>
         <title>SnipEdit</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="javascript/p5.js"></script>
+        <script src="javascript/elementsList.js"></script>
         <script src="javascript/drawing.js"></script>
         <script src="javascript/switchingTool.js"></script>
         <script src="javascript/colorPicker.js"></script>
         <script src="javascript/sizePicker.js"></script>
         <script src="javascript/canvasSetup.js"></script>
-        <script src="javascript/p5.js"></script>
+        
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -17,7 +19,8 @@
             <div id="toolbar">
                 <button class="toolbarButton" onclick="toggleColorPicker()" id="pickColorButton"></button>
                 <button class="toolbarButton toolbarButtonWithHtml" onclick="toggleSizePicker()" id="pickSizeButton">5</button>
-                <button class="toolbarButton" id="brushButton"></button>
+                <button class="toolbarButton toolButton" id="brushButton"></button>
+                <button class="toolbarButton toolButton" id="textButton"></button>
             </div>
         </center>
         <div id="colorPicker" class="colorPickerUnopened">
@@ -65,6 +68,30 @@
             <h3 id="sizeIndicator">5</h3>
             <p id="firstSizeIndicator">1</p><p id="secondSizeIndicator">9</p>
             <button id="sizePickerDone" onclick="submitSize()">Done</button>
+        </div>
+        <div id="textPicker" class="textPickerUnopened">
+            <h2>Add text</h2>
+            <textarea></textarea>
+            <span><select id="fontDropdown" onchange="updateFontDropdown()">
+                <option style="font-family: Arial">Arial</option>
+                <option style="font-family: Impact">Impact</option>
+                <option style="font-family: Verdana">Verdana</option>
+                <option style="font-family: Rockwell">Rockwell</option>
+                <option style="font-family: 'Arial Black';">Arial Black</option>
+                <option style="font-family: newake">Newake</option>
+                <option style="font-family: projekt-blackbird;">Projekt Blackbird</option>
+            </select></span>
+            <div id="textProperties">
+                <input type="checkbox" id="italicTextCheckbox" name="italicTextCheckbox" value="italic">
+                <label for="italicTextCheckbox"><i>Italic</i></label>
+                <input type="checkbox" id="boldTextCheckbox" name="boldTextCheckbox" value="bold">
+                <label for="boldTextCheckbox"><b>Bold</b></label>
+                <input style="width: 30px;" class="inactive" id="textSizeNumberInput" type="number" min="0" max="100" value="50" onKeyDown="return false">
+                <p>Text size</p>
+            </div>
+            
+            <i id="pressSpacePreview">Press space to preview</i>
+            <button id="textPickerDone" onclick="textPickerSubmit()">Done</button>
         </div>
     </body>
 </html>

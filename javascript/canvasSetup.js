@@ -1,4 +1,3 @@
-var elementsChain = []
 var initialImageScaleModifier
 var coefficientRatio
 var pasted = false
@@ -36,8 +35,8 @@ window.addEventListener("paste", function(e){
             if(imageBlob){
                 var URLObj = window.URL || window.webkitURL;
                 src = URLObj.createObjectURL(imageBlob);
-                elementsChain.push({type: "initial image", src: src});
-                initialImage = loadImage(elementsChain[0].src, function() {
+                elementsList.push({id: getId(), type: "initial image", data: src, graphics: src, finishedRenderiing: true})
+                initialImage = loadImage(elementsList[0].data, function() {
                     pasted = true;
                     coefficientRatio = Math.min(width / initialImage.width, height / initialImage.height);
                 })

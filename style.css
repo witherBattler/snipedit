@@ -3,7 +3,16 @@
     src: url(fonts/neon.ttf);
     font-family: neon;
 }
+@font-face {
+    src: url(fonts/NewakeFont-Demo.otf);
+    font-family: newake;
+}
+@font-face {
+    src: url(fonts/projekt-blackbird-v2.otf);
+    font-family: projekt-blackbird
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
 
 canvas {
     object-fit: contain;
@@ -57,7 +66,6 @@ body h1 {
     text-align: center;
 
 }
-
 .sizePickerUnopened {
     position: absolute;
     left: -9999px;
@@ -78,18 +86,19 @@ body h1 {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: -20px;
-} 
-
-h3 {
-    font-family: 'Poppins', sans-serif;
 }
-
 .sizePickerOpened {
     box-shadow:0 0 0 1600px rgba(0,0,0,0.65);/* dark around it */
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 
 
 .colorPickerUnopened {
@@ -154,6 +163,11 @@ h3 {
 
 #brushButton {
     background-image: url(images/brushIcon.png);
+    background-size: cover;
+}
+
+#textButton {
+    background-image: url(images/textIcon.png);
     background-size: cover;
 }
 
@@ -269,6 +283,92 @@ input[type=range]::-webkit-slider-runnable-track {
     background: #666666;
     border-radius: 1000px;
 }
-input[type=range] {
 
+
+
+
+
+
+
+
+
+
+#textPicker {
+    height: 400px;
+    width: 400px;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: white;
+    text-align: center;
+}
+.textPickerUnopened {
+    position: absolute;
+    left: -9999px;
+}
+#textPickerDone:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+    cursor: pointer;
+} 
+#textPickerDone {
+    width: 100px;
+    height: 40px;
+    border: black solid 2px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    display: block;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.textPickerOpened {
+    box-shadow:0 0 0 1600px rgba(0,0,0,0.65);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#textPicker textarea {
+    resize: none;
+    width: 380px;
+    height: 170px;
+    text-align: center;
+    font-size: 25px;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+span select {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin-left: 100px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+option {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+#textProperties p {
+    display: inline;
+}
+
+#textSizeNumberInput {
+    width: 180px;
+    height: 15px;
+}
+
+.inactive, .inactive:focus, .inactive:hover, .inactive:active {
+    outline: none;
+    box-shadow:none;
+}
+
+#pressSpacePreview {
+    margin-top: 10px !important;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#fontDropdown {
+    margin-top: 15px;
 }
